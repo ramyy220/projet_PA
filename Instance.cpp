@@ -5,6 +5,10 @@
  std::string directory_name = "../ressources/tsp_files/";
  std::string solutions_directory_name = "../ressources/solutions/";
 
+ float Instance::convert(float degrees) {
+     return (3.141592*degrees)/180;
+ }
+
 std::vector<City> Instance::readfile(std::string filename) {
 
     std::ifstream file(directory_name+ filename);
@@ -17,7 +21,7 @@ std::vector<City> Instance::readfile(std::string filename) {
         std::string name;
         file>>name>>latitude>>longitude;
         std::cout << name << " " << latitude << " " << longitude << " " << i << " " << std::endl; // A enlever à la fin du projet
-        City newcity = City(name, latitude, longitude,i);
+        City newcity = City(name, convert(latitude), convert(longitude),i);
         cities.push_back(newcity); //ajoute a la fin de mon vecteur
     }
     return  cities;

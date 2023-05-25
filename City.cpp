@@ -18,3 +18,14 @@ double City::getLongitude() {
 int City::getId() {
     return id;
 }
+
+bool City::operator==(const City &rhs) const {
+    return id == rhs.id &&
+           name == rhs.name &&
+           latitude == rhs.latitude &&
+           longitude == rhs.longitude;
+}
+
+bool City::operator!=(const City &rhs) const {
+    return !(rhs == *this);
+}
