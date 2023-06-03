@@ -1,3 +1,6 @@
+#ifndef PROJET_PA_CITY_H
+#define PROJET_PA_CITY_H
+
 #include <string>
 #include <ostream>
 class City {
@@ -18,3 +21,4 @@ private:
     double longitude;
     int id;
 };
+#endif //PROJET_PA_CITY_H

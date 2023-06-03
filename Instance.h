@@ -1,3 +1,6 @@
+#ifndef PROJET_PA_INSTANCE_H
+#define PROJET_PA_INSTANCE_H
+
 #include <vector>
 #include <string>
 #include "City.h"
@@ -11,3 +14,4 @@ public:
 private:
     static float convert(float degrees);
 };
+#endif //PROJET_PA_INSTANCE_H

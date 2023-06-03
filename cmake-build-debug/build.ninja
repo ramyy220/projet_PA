@@ -73,6 +73,30 @@ build CMakeFiles/projet_PA.dir/Solutions.cpp.obj: CXX_COMPILER__projet_PA_Debug 
   OBJECT_DIR = CMakeFiles\projet_PA.dir
   OBJECT_FILE_DIR = CMakeFiles\projet_PA.dir
 
+build CMakeFiles/projet_PA.dir/NeighbourSolution.cpp.obj: CXX_COMPILER__projet_PA_Debug C$:/Users/ramya/CLionProjects/projet_PA/NeighbourSolution.cpp || cmake_object_order_depends_target_projet_PA
+  DEP_FILE = CMakeFiles\projet_PA.dir\NeighbourSolution.cpp.obj.d
+  FLAGS = -g -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles\projet_PA.dir
+  OBJECT_FILE_DIR = CMakeFiles\projet_PA.dir
+
+build CMakeFiles/projet_PA.dir/NeighbourEchange.cpp.obj: CXX_COMPILER__projet_PA_Debug C$:/Users/ramya/CLionProjects/projet_PA/NeighbourEchange.cpp || cmake_object_order_depends_target_projet_PA
+  DEP_FILE = CMakeFiles\projet_PA.dir\NeighbourEchange.cpp.obj.d
+  FLAGS = -g -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles\projet_PA.dir
+  OBJECT_FILE_DIR = CMakeFiles\projet_PA.dir
+
+build CMakeFiles/projet_PA.dir/NeighbourReinsertion.cpp.obj: CXX_COMPILER__projet_PA_Debug C$:/Users/ramya/CLionProjects/projet_PA/NeighbourReinsertion.cpp || cmake_object_order_depends_target_projet_PA
+  DEP_FILE = CMakeFiles\projet_PA.dir\NeighbourReinsertion.cpp.obj.d
+  FLAGS = -g -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles\projet_PA.dir
+  OBJECT_FILE_DIR = CMakeFiles\projet_PA.dir
+
+build CMakeFiles/projet_PA.dir/NeighbourTwoOpt.cpp.obj: CXX_COMPILER__projet_PA_Debug C$:/Users/ramya/CLionProjects/projet_PA/NeighbourTwoOpt.cpp || cmake_object_order_depends_target_projet_PA
+  DEP_FILE = CMakeFiles\projet_PA.dir\NeighbourTwoOpt.cpp.obj.d
+  FLAGS = -g -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles\projet_PA.dir
+  OBJECT_FILE_DIR = CMakeFiles\projet_PA.dir
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target projet_PA
@@ -81,7 +105,7 @@ build CMakeFiles/projet_PA.dir/Solutions.cpp.obj: CXX_COMPILER__projet_PA_Debug 
 #############################################
 # Link the executable projet_PA.exe
 
-build projet_PA.exe: CXX_EXECUTABLE_LINKER__projet_PA_Debug CMakeFiles/projet_PA.dir/main.cpp.obj CMakeFiles/projet_PA.dir/City.cpp.obj CMakeFiles/projet_PA.dir/Instance.cpp.obj CMakeFiles/projet_PA.dir/Solutions.cpp.obj
+build projet_PA.exe: CXX_EXECUTABLE_LINKER__projet_PA_Debug CMakeFiles/projet_PA.dir/main.cpp.obj CMakeFiles/projet_PA.dir/City.cpp.obj CMakeFiles/projet_PA.dir/Instance.cpp.obj CMakeFiles/projet_PA.dir/Solutions.cpp.obj CMakeFiles/projet_PA.dir/NeighbourSolution.cpp.obj CMakeFiles/projet_PA.dir/NeighbourEchange.cpp.obj CMakeFiles/projet_PA.dir/NeighbourReinsertion.cpp.obj CMakeFiles/projet_PA.dir/NeighbourTwoOpt.cpp.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\projet_PA.dir
