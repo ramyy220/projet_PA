@@ -4,6 +4,11 @@
 #include "NeighbourSolution.h"
 #include "NeighbourReinsertion.h"
 #include "NeighbourTwoOpt.h"
+#include "RechercheLocale.h"
+#include "MeilleureAmeliorante.h"
+#include "AlgorithmeDescente.h"
+#include "PremiereAmeliorante.h"
+#include "PremiereAmelioranteAleatoire.h"
 
 int main() {
 
@@ -13,21 +18,22 @@ int main() {
     std::vector<City> cities =  Instance::readfile("france_10.tsp");
     std::vector<City> Glouton10 = Solutions::solGloutonnes(cities);
     Instance::writesolinfile("Glouton10", Glouton10);
+    int index = 9;
 
     //SolEchange :
     NeighbourEchange echangeSol = NeighbourEchange();
     NeighbourSolution* echange = &echangeSol;
-    std::vector<City> sol1 = echange->upgrade(Glouton10,9 );
+    std::vector<City> sol1 = echange->upgrade(Glouton10,index );
 
     //SolReinsertion :
     NeighbourReinsertion reinsertionSol = NeighbourReinsertion();
     NeighbourSolution* reinsertion = &reinsertionSol;
-    std::vector<City> sol2 = reinsertion->upgrade(Glouton10, 9);
+    std::vector<City> sol2 = reinsertion->upgrade(Glouton10, index);
 
     //SolTwoOpt :
     NeighbourTwoOpt twooptSol = NeighbourTwoOpt();
     NeighbourTwoOpt *twoopt = &twooptSol;
-    std::vector<City> sol = twoopt->upgrade(Glouton10, 9);
+    std::vector<City> sol = twoopt->upgrade(Glouton10, index);
 
 
 
@@ -41,10 +47,34 @@ int main() {
     }
 
     //4.3 nmbr de Neighbors :
-    std:: cout << "Number of neighbors: " << (9 * (9 - 1)) / 2;
+    int n = index;
+    std:: cout << "Number of neighbors: " << (n * (n - 1)) / 2;
 
     //5.3 nmbr de neighbors :
-    std::cout << "Number of neighbors: " << (9 - 1) * (9 - 2);
+    std::cout << "Number of neighbors: " << (n - 1) * (n - 2);
+
+    // Recherche Locale Meilleure Ameliorante
+     //RechercheLocale *local_search = new MeilleureAmeliorante();
+     //NeighbourSolution *upgrade = reinterpret_cast<NeighbourSolution *>(new NeighbourReinsertion());
+     //std::vector<City> solution_cities = local_search->local_search(cities, upgrade);
+
+     //Recherche Locale Algorithme Descente *
+   // RechercheLocale *local_search = new AlgorithmeDescente();
+    //NeighbourSolution *upgrade = reinterpret_cast<NeighbourSolution *>(new NeighbourTwoOpt());
+     //std::vector<City> solution_cities = local_search->local_search(cities, upgrade);
+
+     //Recherche variante Premiere Ameliorante
+   // RechercheLocale *local_search = new PremiereAmeliorante();
+    //NeighbourSolution *upgrade = reinterpret_cast<NeighbourSolution *>(new NeighbourReinsertion());
+    //std::vector<City> solution_cities = local_search->local_search(cities, upgrade);
+
+    //Recherche variante Premiere Ameliorante Aleatoire
+    //RechercheLocale *local_search = new PremiereAmelioranteAleatoire();
+    //NeighbourSolution *upgrade = reinterpret_cast<NeighbourSolution *>(new NeighbourTwoOpt());
+    //std::vector<City> solution_cities = local_search->local_search(cities, upgrade);
+
+     
+
 
     return 0;
 }

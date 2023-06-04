@@ -25,6 +25,7 @@ float Solutions::distance(City city1, City city2) {
             cos(city2.getLongitude() - city1.getLongitude())
     );
 }
+
 std::vector<City> Solutions::solGloutonnes( std::vector<City> cities){
     std::vector<City> solution;
     std::vector<City> citiesCopy = cities;
@@ -46,3 +47,11 @@ std::vector<City> Solutions::solGloutonnes( std::vector<City> cities){
     return solution;
 }
 
+ float compute_score(std::vector<City> cities) {
+     float score = 0;
+    for ( int i = 0; i < cities.size() - 1; ++i) {
+        score += Solutions::distance(cities[i], cities[i + 1]);
+    }
+    score += Solutions::distance(cities[0], cities[cities.size() - 1]);
+    return score;
+}
